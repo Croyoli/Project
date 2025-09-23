@@ -1,30 +1,18 @@
 import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
 import { router } from "expo-router";
 
-export default function Index() {
-  const handleProfilePress = () => {
-    // Navigate to profile screen
-    router.push("/profile");
-  };
-
-  const handleStartPress = () => {
-    // Navigate to start screen
-    router.push("/start");
+export default function Profile() {
+  const handleBackPress = () => {
+    // Navigate back to index screen
+    router.push("/");
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>The Four Beautiful Guys!</Text>
-      
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={handleProfilePress}>
-          <Text style={styles.buttonText}>Profile</Text>
-        </TouchableOpacity>
-        
-        <TouchableOpacity style={styles.button} onPress={handleStartPress}>
-          <Text style={styles.buttonText}>Start</Text>
-        </TouchableOpacity>
-      </View>
+      <Text style={styles.title}>Profile Screen</Text>
+      <TouchableOpacity style={styles.button} onPress={handleBackPress}>
+        <Text style={styles.buttonText}>Back to Home</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -43,11 +31,6 @@ const styles = StyleSheet.create({
     color: "#333",
     marginBottom: 50,
     textAlign: "center",
-  },
-  buttonContainer: {
-    width: "100%",
-    maxWidth: 300,
-    gap: 15,
   },
   button: {
     backgroundColor: "#007AFF",
