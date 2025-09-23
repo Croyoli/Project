@@ -1,4 +1,4 @@
-import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
+import { Text, View, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 import { router } from "expo-router";
 
 export default function Start() {
@@ -7,32 +7,75 @@ export default function Start() {
     router.push("/");
   };
 
+  const handleLandmarkPress = (landmarkNumber: number) => {
+    console.log(`Landmark ${landmarkNumber} button pressed`);
+    // You can add navigation to specific landmark screens here later
+    // router.push(`/landmark${landmarkNumber}`);
+  };
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Start Screen</Text>
-      <TouchableOpacity style={styles.button} onPress={handleBackPress}>
-        <Text style={styles.buttonText}>Back to Home</Text>
-      </TouchableOpacity>
-    </View>
+    <ScrollView style={styles.container}>
+      <View style={styles.content}>
+        <Text style={styles.title}>Start</Text>
+        
+        <View style={styles.landmarkButtonsContainer}>
+          {[1, 2, 3, 4, 5].map((number) => (
+            <TouchableOpacity 
+              key={number}
+              style={styles.landmarkButton} 
+              onPress={() => handleLandmarkPress(number)}
+            >
+              <Text style={styles.landmarkButtonText}>Landmark {number}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+        
+        <TouchableOpacity style={styles.backButton} onPress={handleBackPress}>
+          <Text style={styles.backButtonText}>Back to Home</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
     backgroundColor: "#f5f5f5",
+  },
+  content: {
     padding: 20,
+    paddingTop: 60, // Extra padding to move title to top
   },
   title: {
-    fontSize: 28,
+    fontSize: 32,
     fontWeight: "bold",
     color: "#333",
-    marginBottom: 50,
     textAlign: "center",
+    marginBottom: 30,
   },
-  button: {
+  landmarkButtonsContainer: {
+    marginBottom: 30,
+    gap: 15,
+  },
+  landmarkButton: {
+    backgroundColor: "#34C759",
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 10,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  landmarkButtonText: {
+    color: "white",
+    fontSize: 18,
+    fontWeight: "600",
+  },
+  backButton: {
     backgroundColor: "#007AFF",
     paddingVertical: 15,
     paddingHorizontal: 30,
@@ -44,7 +87,7 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  buttonText: {
+  backButtonText: {
     color: "white",
     fontSize: 18,
     fontWeight: "600",

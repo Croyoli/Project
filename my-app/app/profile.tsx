@@ -12,9 +12,9 @@ export default function Profile() {
       <View style={styles.content}>
         <Text style={styles.title}>Profile</Text>
         
-        <View style={styles.collectablesContainer}>
-          <Text style={styles.collectablesTitle}>Collectables</Text>
-          <View style={styles.collectablesBox}>
+        <View style={styles.landmarksContainer}>
+          <Text style={styles.landmarksTitle}>Landmarks</Text>
+          <View style={styles.landmarksBox}>
             {/* This box will hold images or icons */}
           </View>
         </View>
@@ -43,16 +43,16 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 30,
   },
-  collectablesContainer: {
+  landmarksContainer: {
     marginBottom: 30,
   },
-  collectablesTitle: {
+  landmarksTitle: {
     fontSize: 24,
     fontWeight: "600",
     color: "#333",
     marginBottom: 15,
   },
-  collectablesBox: {
+  landmarksBox: {
     backgroundColor: "white",
     borderRadius: 10,
     padding: 20,
