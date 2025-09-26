@@ -10,3 +10,7 @@ While apps like Pokémon GO or general geocaching platforms provide broad, globa
 - Jacob Foote  
 - Sebastian Grabill  
 - Samuel Ntadom  
+
+## Repositories
+[Client]([https://link-url-here.org](https://github.com/calvin-cs262-fall2025-teamB/Client))
+[Service](https://github.com/calvin-cs262-fall2025-teamB/Service)
