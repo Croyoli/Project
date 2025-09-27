@@ -1,6 +1,0 @@
-screwed up the initial Project creation, needed to make a Main branch first
-before anyone did a git checkout because that branch created using the
-git checkout became the default branch and thus could not pull request since
-it was already default branch.  suggest changing the 3.2 instructions to 
-making a new Main branch before anyone does a git checkout.  either that
-or i did something wrong.
