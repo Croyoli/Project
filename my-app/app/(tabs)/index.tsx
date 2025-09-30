@@ -5,12 +5,10 @@ import Button from '@/components/home/Button';
 
 export default function Index() {
   const handleProfilePress = () => {
-    // Navigate to profile screen
     router.push("/profile");
   };
 
   const handleStartPress = () => {
-    // Navigate to start screen
     router.push("/start");
   };
 
