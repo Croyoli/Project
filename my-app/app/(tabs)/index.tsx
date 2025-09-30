@@ -1,6 +1,8 @@
 import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
 import { router } from "expo-router";
 
+import Button from '@/components/home/Button';
+
 export default function Index() {
   const handleProfilePress = () => {
     // Navigate to profile screen
@@ -17,13 +19,8 @@ export default function Index() {
       <Text style={styles.title}>The Four Beautiful Guys!</Text>
       
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={handleProfilePress}>
-          <Text style={styles.buttonText}>Profile</Text>
-        </TouchableOpacity>
-        
-        <TouchableOpacity style={styles.button} onPress={handleStartPress}>
-          <Text style={styles.buttonText}>Start</Text>
-        </TouchableOpacity>
+        <Button theme = "primary" label = "Profile" onPress = {handleProfilePress} />
+        <Button theme = "primary" label = "Start" onPress = {handleStartPress} />
       </View>
     </View>
   );
