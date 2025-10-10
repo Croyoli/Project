@@ -9,7 +9,9 @@ While apps like Pokémon GO or general geocaching platforms provide broad, globa
 - Levi Cooper  
 - Jacob Foote  
 - Sebastian Grabill  
-- Samuel Ntadom  
+- Samuel Ntadom
+
+## Design Models
 
 ## Repositories
 [Client](https://github.com/calvin-cs262-fall2025-teamB/Client)
